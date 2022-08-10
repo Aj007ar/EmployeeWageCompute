@@ -10,6 +10,8 @@
             Console.WriteLine("3.UC3 Employee DailyWage");
             Console.WriteLine("4.UC4 Employee Wage using Switch");
             Console.WriteLine("5.UC5 Employee Wage for a Month");
+            Console.WriteLine("5.UC5 Employee Wage for a Month");
+            Console.WriteLine("6.UC6 Employee Wage using while");
 
             Console.WriteLine("\nEnter number for UC execute");
             int check = Convert.ToInt32(Console.ReadLine());
@@ -40,6 +42,11 @@
                     Console.WriteLine("\n**************Total Salary For Month****************************");
                     UC5EmpWageMonth totalWage = new UC5EmpWageMonth();
                     totalWage.EmpWageMonth();
+                    break;
+                case 6:
+                    Console.WriteLine("\n***************Max Salary using While****************************");
+                    UC6EmpWageWhile obj1 = new UC6EmpWageWhile();
+                    obj1.EmpWageTotal();
                     break;
             }
         }

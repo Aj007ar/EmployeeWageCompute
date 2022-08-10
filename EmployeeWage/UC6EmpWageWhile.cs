@@ -6,20 +6,24 @@ using System.Threading.Tasks;
 
 namespace EmployeeWage
 {
-    internal class UC5EmpWageMonth
+    internal class UC6EmpWageWhile
     {
-        public void EmpWageMonth()
+        public void EmpWageTotal()
         {
             const int Part_Time = 2;
             const int Full_Time = 1;
             const int empRatePerHr = 20;
             const int numOfWorkDay = 20;
+            const int MaxWorkHr = 100;
 
             int empHr = 0;
             int totalwage = 0;
+            int totalWorkDays = 0;
+            int totalEmpHrs = 0;
 
-            for (int i = 1; i <= numOfWorkDay; i++)
+            while (totalWorkDays < numOfWorkDay && totalEmpHrs <= MaxWorkHr)
             {
+                totalWorkDays++;
                 Random random = new Random();
                 int empCheck = random.Next(0, 3);
 
@@ -36,10 +40,11 @@ namespace EmployeeWage
                         break;
 
                 }
-                int salary = empHr * empRatePerHr;
-                totalwage += salary;
+                totalEmpHrs += empHr;
             }
-            Console.WriteLine("Employee wage for month is:" + totalwage);
+            totalwage = totalEmpHrs * empRatePerHr;
+            Console.WriteLine("Day: " + totalWorkDays + "\nEmployee working Hrs: " + totalEmpHrs);
+            Console.WriteLine("Total Salary is: " + totalwage);
         }
     }
 }

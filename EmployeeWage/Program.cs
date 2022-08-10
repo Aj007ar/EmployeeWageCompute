@@ -8,6 +8,7 @@
             Console.WriteLine("1.UC1 Employee Attendance");
             Console.WriteLine("2.UC2 Employee PartTime");
             Console.WriteLine("3.UC3 Employee DailyWage");
+            Console.WriteLine("4.UC4 Employee Wage using Switch");
 
             Console.WriteLine("\nEnter number for UC execute");
             int check = Convert.ToInt32(Console.ReadLine());
@@ -28,6 +29,11 @@
                     Console.WriteLine("\n*****************Employee Wage*******************************");
                     UC3EmployeeWage wage = new UC3EmployeeWage();
                     wage.DailyWage();
+                    break;
+                case 4:
+                    Console.WriteLine("\n*************Epmloyee wage using Switch Case*******************");
+                    UC4EmpWageSwitch wageCase = new UC4EmpWageSwitch();
+                    wageCase.Empwage();
                     break;
             }
         }
